@@ -1,0 +1,13 @@
+server:
+  port: 8282
+
+spring:
+  data:
+    solr:
+      host: http://192.168.91.130:8080/solr
+
+dubbo:
+  application:
+    name: myshop_search
+  registry:
+    address: zookeeper://192.168.91.130:2181

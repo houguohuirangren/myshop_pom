@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.dao.IGoodsDao" >
+
+
+  <select id="getAllGoods" resultType="com.qf.entity.Goods">
+    select * from t_goods
+  </select>
+  <insert id="addGoods" useGeneratedKeys="true" keyProperty="id">
+    insert  into t_goods (id,title,ginfo,gcount,tid,allprice,price,gimage)
+    values (null ,#{title},#{ginfo},#{gcount},#{tid},#{allprice},#{price},#{gimage})
+  </insert>
+
+  <select id="getnewGoodsList" resultType="com.qf.entity.Goods">
+    select * from  t_goods group by id desc limit 4
+  </select>
+</mapper>
