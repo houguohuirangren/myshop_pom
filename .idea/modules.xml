@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/myshop_dao/myshop_dao.iml" filepath="$PROJECT_DIR$/myshop_dao/myshop_dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/myshop_entity/myshop_entity.iml" filepath="$PROJECT_DIR$/myshop_entity/myshop_entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/myshop_front/myshop_front.iml" filepath="$PROJECT_DIR$/myshop_front/myshop_front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myshop_item/myshop_item.iml" filepath="$PROJECT_DIR$/myshop_item/myshop_item.iml" />
       <module fileurl="file://$PROJECT_DIR$/myshop_pom.iml" filepath="$PROJECT_DIR$/myshop_pom.iml" />
       <module fileurl="file://$PROJECT_DIR$/myshop_serach/myshop_serach.iml" filepath="$PROJECT_DIR$/myshop_serach/myshop_serach.iml" />
       <module fileurl="file://$PROJECT_DIR$/myshop_service/myshop_service.iml" filepath="$PROJECT_DIR$/myshop_service/myshop_service.iml" />

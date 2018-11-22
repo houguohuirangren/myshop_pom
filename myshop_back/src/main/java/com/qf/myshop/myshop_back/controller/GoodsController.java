@@ -5,6 +5,7 @@ import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.google.gson.Gson;
 import com.qf.entity.Goods;
+import com.qf.entity.PageSolr;
 import com.qf.service.IGoodsService;
 import com.qf.util.HttpClientUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class GoodsController {
     public FastFileStorageClient fastFileStorageClient;
 
     @RequestMapping("/getAllGoodsInfo")
-    public String getAllGoods(Model model){
+    public String getAllGoods(Model model, PageSolr<Goods> pageSolr){
         List<Goods> goods = goodsService.getAllGoods();
         model.addAttribute("goods",goods );
         model.addAttribute("spath", spath);
@@ -51,6 +52,7 @@ public class GoodsController {
         goods.setGimage(path);
         Goods jsonGoods = goodsService.addGoods(goods);
         HttpClientUtil.sendjson("http://localhost:8282/search/addsearchList", new Gson().toJson(jsonGoods));
+        HttpClientUtil.sendjson("http://localhost:8383/item/createhtml", new Gson().toJson(jsonGoods));
 
         return "redirect:/goods/getAllGoodsInfo";
     }

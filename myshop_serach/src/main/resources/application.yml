@@ -11,3 +11,8 @@ dubbo:
     name: myshop_search
   registry:
     address: zookeeper://192.168.91.130:2181
+  consumer:
+    check: false
+
+image:
+  path: http://192.168.91.130/

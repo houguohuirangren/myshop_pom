@@ -1,6 +1,7 @@
 package com.qf.service;
 
 import com.qf.entity.Goods;
+import com.qf.entity.PageSolr;
 
 /**
  * @Author LWW
@@ -10,4 +11,6 @@ import com.qf.entity.Goods;
 public interface ISerachService {
 
     int addSerchList(Goods goods);
+
+    PageSolr<Goods> getgoodsInfoBykeyword(String keyword,PageSolr<Goods> pageSolr);
 }
