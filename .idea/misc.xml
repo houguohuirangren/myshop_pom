@@ -78,6 +78,8 @@
         <option value="$PROJECT_DIR$/myshop_front/pom.xml" />
         <option value="$PROJECT_DIR$/myshop_serach/pom.xml" />
         <option value="$PROJECT_DIR$/myshop_item/pom.xml" />
+        <option value="$PROJECT_DIR$/myshop_sso/pom.xml" />
+        <option value="$PROJECT_DIR$/myshop_cart/pom.xml" />
       </list>
     </option>
   </component>

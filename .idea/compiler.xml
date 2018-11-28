@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="myshop_back" />
+        <module name="myshop_cart" />
         <module name="myshop_dao" />
         <module name="myshop_entity" />
         <module name="myshop_front" />
@@ -14,10 +15,12 @@
         <module name="myshop_serach" />
         <module name="myshop_service" />
         <module name="myshop_service_api" />
+        <module name="myshop_sso" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="myshop_back" target="1.8" />
+      <module name="myshop_cart" target="1.8" />
       <module name="myshop_dao" target="1.8" />
       <module name="myshop_entity" target="1.8" />
       <module name="myshop_front" target="1.8" />
@@ -26,6 +29,7 @@
       <module name="myshop_serach" target="1.8" />
       <module name="myshop_service" target="1.8" />
       <module name="myshop_service_api" target="1.8" />
+      <module name="myshop_sso" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
