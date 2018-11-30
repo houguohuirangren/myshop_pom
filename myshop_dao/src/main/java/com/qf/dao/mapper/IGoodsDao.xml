@@ -14,4 +14,7 @@
   <select id="getnewGoodsList" resultType="com.qf.entity.Goods">
     select * from  t_goods group by id desc limit 4
   </select>
+    <select id="getGoodsById" resultType="com.qf.entity.Goods">
+      select * from t_goods where id=#{gid}
+    </select>
 </mapper>

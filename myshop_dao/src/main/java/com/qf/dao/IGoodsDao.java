@@ -16,4 +16,6 @@ public interface IGoodsDao {
     void addGoods(Goods goods);
 
     List<Goods> getnewGoodsList();
+
+    Goods getGoodsById(Integer gid);
 }

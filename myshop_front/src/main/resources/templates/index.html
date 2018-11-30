@@ -24,15 +24,30 @@
            });
         });
 
-        /*  <ul id="tuijian_content_1_newgoods">
-              <li>
-              <dl>
-              <dt><a ><img src="images/365_7d5e08127b8d6799209674ecffbfc624.jpg_small.jpg" /></a></dt>
-          <dd><a >11111111棉布艺双人沙发垫沙发巾飘窗垫素雅黄花</a></dd>
-          <dd> 商城价：<em>256.00</em>元</dd>
-          </dl>
-          </li>
-          </ul>*/
+      $(function () {
+          $.ajax({
+              url:"http://localhost:8585/cart/getCartlist",
+              dataType:"jsonp"
+          });
+      });
+      function getCarts(data) {
+          if (data!=null){
+              $("#cid").html(data.length);
+              $("#shopcart").html("<ul>");
+
+              for (var i = 0; i <data.length ; i++) {
+                  $("#shopcart").append("<li>")
+
+                  $("#shopcart").append("<img style='width: 60px;' src='http://192.168.91.130/"+data[i].goods.gimage+"'/><br/>")
+                  $("#shopcart").append("<span>"+data[i].goods.title+"</span>")
+                  $("#shopcart").append("&nbsp;&nbsp; *<span>"+data[i].gnum+"</span>")
+                  $("#shopcart").append("</li>")
+              }
+              $("#shopcart").append("</ul>");
+
+
+          }
+      }
 
 
     </script>
@@ -62,6 +77,7 @@
                                     <li><a title="已买到的商品" target="_top" href="#">已买到的商品</a></li>
                                     <li><a title="个人主页" target="_top" href="#">个人主页</a></li>
                                     <li><a title="我的好友" target="_top" href="#">我的好友</a></li>
+                                    <li><a title="我的订单" target="_top" href="http://localhost:8686/order/getMyorder">我的订单</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -80,14 +96,8 @@
 
                     <li>
                         <div class="topNav_menu">
-                            <a href="#" class="topNavHover">购物车<b>0</b>种商品<i></i></a>
-                            <div class="topNav_menu_bd" style="display:none;">
-                                <!--
-                                <ul>
-                                  <li><a title="已售出的商品" target="_top" href="#">已售出的商品</a></li>
-                                  <li><a title="销售中的商品" target="_top" href="#">销售中的商品</a></li>
-                                </ul>
-                                -->
+                            <a href="http://localhost:8585/cart/showcartlist" class="topNavHover">购物车<b id="cid">0</b>种商品<i></i></a>
+                            <div id="shopcart" class="topNav_menu_bd" style="display:none;">
                                 <p>还没有商品，赶快去挑选！</p>
                             </div>
                         </div>

@@ -11,6 +11,8 @@ spring:
   data:
     solr:
       host: http://192.168.91.130:8080/solr
+  redis:
+    host: 192.168.91.130
 mybatis:
   mapper-locations: classpath*:com/qf/dao/mapper/*.xml
   type-aliases-package: com.qf.entity
@@ -23,3 +25,5 @@ dubbo:
     address: zookeeper://192.168.91.130:2181
   application:
     name: service_privder
+  provider:
+    timeout: 12000

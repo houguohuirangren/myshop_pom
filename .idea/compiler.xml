@@ -12,6 +12,7 @@
         <module name="myshop_entity" />
         <module name="myshop_front" />
         <module name="myshop_item" />
+        <module name="myshop_order" />
         <module name="myshop_serach" />
         <module name="myshop_service" />
         <module name="myshop_service_api" />
@@ -25,6 +26,7 @@
       <module name="myshop_entity" target="1.8" />
       <module name="myshop_front" target="1.8" />
       <module name="myshop_item" target="1.8" />
+      <module name="myshop_order" target="1.8" />
       <module name="myshop_pom" target="1.8" />
       <module name="myshop_serach" target="1.8" />
       <module name="myshop_service" target="1.8" />

@@ -80,6 +80,7 @@
         <option value="$PROJECT_DIR$/myshop_item/pom.xml" />
         <option value="$PROJECT_DIR$/myshop_sso/pom.xml" />
         <option value="$PROJECT_DIR$/myshop_cart/pom.xml" />
+        <option value="$PROJECT_DIR$/myshop_order/pom.xml" />
       </list>
     </option>
   </component>
